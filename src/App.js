@@ -19,11 +19,20 @@ import Work from './pages/Work';
 
 function App() {
 
-  const [menu, setMenu] = useState(false)
+  const [menu, setMenu] = useState(false);
+  const [cursorX, setCursorX] = useState();
+  const [cursorY, setCursorY] = useState();
+
+
+  window.addEventListener('mousemove', (e) =>{
+    setCursorX(e.pageX - 22);
+    setCursorY(e.pageY - 20);
+  })
 
   return (
    <BrowserRouter>
      <div className='main_bg'> 
+     <div className="cursor" style={{left:cursorX + "px", top:cursorY + "px"}}></div>
         <div className="main_box py-4 w-[70%] my-0 mx-auto min-h-[100vh]">
           <div className="navbar mb-4">
             <Navbar />
