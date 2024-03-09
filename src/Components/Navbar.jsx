@@ -17,11 +17,11 @@ function Navbar() {
 
   return (
     <nav className='text-white bg-[--gray] flex items-center px-1 py-3 rounded-[10px] backdrop-blur-lg navsticky'>
-            <Link onClick={() => openMenu()} to="/" className='px-0 py-0 rounded-md mx-2 home_link bg-[--blue] hover:opacity-[0.5] transition-all mobile'><HiHome /></Link>
+            <Link onClick={() => setMenu(false)} to="/" className='px-0 py-0 rounded-md mx-2 home_link bg-[--blue] hover:opacity-[0.5] transition-all mobile'><HiHome /></Link>
         <div className={menu ? "flex items-center ul active transition-all" : "flex items-center ul transition-all"}>
-            <Link onClick={() => openMenu()} to="/" className='px-0 py-0 rounded-md mx-2 home_link bg-[--blue] hover:opacity-[0.5] transition-all'><HiHome /></Link>
+            <Link onClick={() => setMenu(false)} to="/" className='px-0 py-0 rounded-md mx-2 home_link bg-[--blue] hover:opacity-[0.5] transition-all'><HiHome /></Link>
+            <Link onClick={() => openMenu()} to="/work" className='py-1 rounded-md mx-2 hover:opacity-[0.5] transition-all'>Work experience</Link>
             <Link onClick={() => openMenu()} to="/projects" className='py-1 rounded-md mx-2 hover:opacity-[0.5] transition-all'>Projects</Link>
-            <Link onClick={() => openMenu()} to="/skills" className='py-1 rounded-md mx-2 hover:opacity-[0.5] transition-all'>Skills</Link>
             <Link onClick={() => openMenu()} to="/blog" className='py-1 rounded-md mx-2 hover:opacity-[0.5] transition-all'>Blog</Link>
             <Link onClick={() => openMenu()} to="/contact" className='py-1 rounded-md mx-2 hover:opacity-[0.5] transition-all'>Contact</Link>
         </div>

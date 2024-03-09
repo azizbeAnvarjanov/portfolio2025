@@ -13,9 +13,9 @@ import Footer from './Components/Footer';
 import PageNotFound from './pages/PageNotFound';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
-import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import Home from './pages/Home';
+import Work from './pages/Work';
 
 function App() {
 
@@ -36,8 +36,8 @@ function App() {
               <div className="page_box w-[68.5%] ml-auto text-white bg-[--gray] min-h-[76.5vh] rounded-md p-6 pages_box">
               <Routes>
                 <Route path='/' element={<Home />}/>
+                <Route path='/work' element={<Work />}/>
                 <Route path='/projects' element={<Projects />}/>
-                <Route path='/skills' element={<Skills />}/>
                 <Route path='/blog' element={<Blog />}/>
                 <Route path='/contact' element={<Contact />}/>
                 <Route path='/404' element={<PageNotFound />}/>

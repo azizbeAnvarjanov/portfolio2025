@@ -11,9 +11,30 @@
 }
 
 
+body
+{
+  background: linear-gradient(220deg, #0e213d, #070a0f, #0e213d);
+  background-size: 300%, 300%;
+  animation: move-bg 20s infinite linear;
+  -webkit-animation: move-bg 20s infinite linear;
+}
+
+@keyframes move-bg {
+  0%{
+    background-position: 0%, 50%;
+  }
+  50%{
+    background-position: 100%, 50%;
+  }
+  100%{
+    background-position: 0%, 50%;
+  }
+}
+
+
 .main_bg
 {
-  background: url(./imgs/bg.png);
+  /* background: url(./imgs/bg.png); */
   width: 100%;
   height: auto;
   background-position: top;
@@ -92,6 +113,76 @@
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
 }
+
+/* css-heg063-MuiTabs-flexContainer */
+.MuiTabs-flexContainer button
+{
+  color: #fff;
+  font-weight: 400 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 1280px) {
@@ -255,6 +346,16 @@
   .contact_box .box
   {
     grid-template-columns: repeat(1,1fr) !important;
+  }
+
+  .about_me p
+  {
+    padding-right: 0;
+  }
+
+  .skills
+  {
+  grid-template-columns: repeat(1,1fr);
   }
 
 }
